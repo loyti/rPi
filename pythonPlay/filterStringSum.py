@@ -13,12 +13,11 @@ for currentTest in bigList:
 			if type(itemTest) is int:
 				sum += itemTest
 				sumInt.append(itemTest)
+				print "you found an int"
 				continue
 			elif type(itemTest) is str:
+				sumString.append(itemTest)
 				print "you found a string"
-				break
-
-bigList = [spI, sS, bS, mL lL]
-for i in bigList:
-	if type(bigList[i]) is int: 
-		print "You found an int"
+				continue
+		
+print sumString, sum, sumInt

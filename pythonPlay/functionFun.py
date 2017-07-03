@@ -1,6 +1,8 @@
+startNum = 0
+stopNum = 0
 def oddEven(startNum, stopNum):
-	startNum = 1
-	stopNum = 2000
+	#startNum = 1
+	#stopNum = 2000
 	oddNum = []
 	evenNum = []
 	for i in range(startNum, stopNum):

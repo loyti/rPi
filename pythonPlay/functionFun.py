@@ -12,5 +12,14 @@ def oddEven(startNum, stopNum):
 		else:
 			evenNum.append(i)
 			print "Number is",i,"This number is even."
-	print oddNum, evenNum
 oddEven(1,2000)
+
+newArr = [2,4,10,16]
+arrMult = []
+multiplier = 5
+def multArr(newArr,multiplier):
+	for i in newArr:
+		i *= multiplier
+		arrMult.append(i)
+	print arrMult
+multArr(newArr,multiplier)

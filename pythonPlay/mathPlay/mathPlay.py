@@ -1,13 +1,23 @@
 class MathDojo(object):
-	def __init__(self, num*):
-		self.num = num
-	def add(self):
-		self.num =+ self.num
-		print "You just added {} with {} giving you {}".format(self.num)
+	def __init__(self):
+		self.result = 0
+	def add(self, *nums):
+		for i in nums:
+			if isinstance(i, list) or isinstance(i, tuple):
+				for j in i: 
+					self.result += i
+			else:
+				self.result += i
+		print "You've done addition... Your new total is {}".format(self.result)
 		return self
-	def subtract(self):
-		self.result = self.num1 - self.num2
-		print "You just subtracted {} from {} giving you {}".format(self.num1, self.num2, self.result)
+	def subtract(self, *nums):
+		for i in nums:
+			if isinstance(i, list) or isinstance(i, tuple):
+				for j in i:
+					self.result -= i
+			else:
+				self.result -=  i
+		print "You just subtracted, your new total is {}".format(self.result)
 		return self
 
-mathDojo().add(2).add(2,5).subtract(3,2).result
+MathDojo().add(2).add(20,5).subtract(3,20).result

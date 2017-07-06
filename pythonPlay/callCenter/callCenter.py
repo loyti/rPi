@@ -1,6 +1,7 @@
 class Call(object):
 	callID = 0
 	callQue = []
+	activeCall = False
 	def __init__(self):
 		pass
 
@@ -9,6 +10,8 @@ class Call(object):
 		self.id = self.__class__.callID
 		self.__class__.callQue.append(callerName)
 		self.callQue = self.__class__.callQue
+		self.__class__.activeCall = True
+		self.activeCall = self.__class__.activeCall
         	self.callerName = callerName
         	self.callerNumber = callerNumber
         	self.callTime = callTime
@@ -23,9 +26,26 @@ class Call(object):
 			print len(self.callQue),"Callers in the queue",self.callQue
 		return self
 
+	def openCall(self):
+		self.__class__.activeCall != self.__class__.activeCall
+		self.activeCall = self.__class__.activeCall
+		print "The call with {} is open {}".format(self.callQue,self.activeCall)
+		return self
+
+	def closeCall(self):
+		self.activeCall != self.activeCall
+		print "The call is closed {}".format(self.activeCall)
+		i = 0
+		self.temp = self.callQue.pop(i)
+		while i < len(self.callQue):
+			callQue[i+1] = callQue[i]
+			i += 1
+		print "{} has been removed from the Queue and {} remain".format(self.temp,self.callQue)
+		return self
+	
 randomCall1 = Call()
 randomCall1.newCall("Brice",7145555555,1700,"Pizza Delivery")
-randomCall1.displayCall()
+randomCall1.displayCall().openCall()
 
 randomCall2 = Call()
 randomCall2.newCall("Niko",6265555555,800,"Breakfast")
@@ -39,4 +59,4 @@ randomCall4 = Call()
 randomCall4.newCall("Oli",3105555555,1000,"Films")
 randomCall4.displayCall()
 
-
+randomCall1.closeCall()

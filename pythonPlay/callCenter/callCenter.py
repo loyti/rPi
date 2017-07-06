@@ -35,12 +35,8 @@ class Call(object):
 	def closeCall(self):
 		self.activeCall != self.activeCall
 		print "The call is closed {}".format(self.activeCall)
-		i = 0
-		self.temp = self.callQue.pop(i)
-		while i < len(self.callQue):
-			callQue[i+1] = callQue[i]
-			i += 1
-		print "{} has been removed from the Queue and {} remain".format(self.temp,self.callQue)
+		temp = self.callQue.pop(0)
+		print "{} has been removed from the Queue and {} remain".format(temp,self.callQue)
 		return self
 	
 randomCall1 = Call()
